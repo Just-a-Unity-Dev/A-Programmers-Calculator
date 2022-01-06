@@ -46,18 +46,26 @@ function logKey(e) {
                 if (length > 0){
                     var string = text.substring(0, length - 1)
                     cli.textContent = string
-                    console.log(string)
                 }else{
                     cli.textContent = " "
                 }
             }
             break
         case 13:
-            if (!control == 0)
-            var answer = math.evaluate(log.textContent)
-            output.textContent = answer
-            console.log(answer)
+            if (!control == 0){
+                var answer = math.evaluate(log.textContent)
+                output.textContent = answer
+            }else{
+                var command = cli.textContent.substring(1,cli.length)
+                switch(command.toLowerCase()){
+                    case "insert":
+                        control = 1
+                }
+                cli.textContent = ":"
+            }
             break
+        case 27:
+            control = 0
         case 32:
             log.textContent += " "
             break
