@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Programmers Calculator - Vim Styled Calculator</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"></link>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/mathjs/lib/browser/math.js"></script>
 </head>
@@ -16,10 +17,10 @@
     </div>
 
     <div id="calc" style="text-align: center;">
-        <p id="input">(500 - (180 + 50 + 15)) * -1</p>
+        <p id="input" class="underline">(500 - (180 + 50 + 15)) * -1</p>
         <p id="output">-255</p>
-        <p id="control">--- INSERT ---</p>
-        <p id="commandline">:</p>
+        <p id="control" class="amber-400">--- INSERT ---</p>
+        <p id="commandline" class="underline indigo-500">:</p>
     </div>
     <script src="js/index.js"></script>
 </body>
