@@ -1,6 +1,7 @@
 const log = document.getElementById('input');
 const output = document.getElementById('output')
 const cli = document.getElementById('commandline')
+const controlView = document.getElementById('control')
 var control = 0
 // 0 - command mode
 // 1 - insert mode
@@ -82,5 +83,11 @@ function logKey(e) {
             if (!control == 0)
             log.textContent += "/"
             break
+    }
+
+    if (control == 0){
+        control.textContent = "--- COMMAND ---"
+    }else if(control == 1){
+        control.textContent = "--- INSERT ---"
     }
 }
